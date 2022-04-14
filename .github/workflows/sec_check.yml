@@ -45,3 +45,17 @@ jobs:
         id: checkov
         uses: bridgecrewio/checkov-action@v12.1347.0
       
+  terrascan_job:
+    runs-on: ubuntu-latest
+    name: terrascan-action
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Run Terrascan
+      id: terrascan
+      uses: accurics/terrascan-action@v1
+      with:
+        iac_type: 'terraform'
+        iac_version: 'v14'
+        policy_type: 'aws'
+        only_warn: true
