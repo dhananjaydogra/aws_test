@@ -1,6 +1,4 @@
 readme file
 line 2
 line 3
-
-[![SecurityChecks](https://github.com/dhananjaydogra/ddogra1_ACS730_final_project/actions/workflows/SecChecks.yml/badge.svg)](https://github.com/dhananjaydogra/ddogra1_ACS730_final_project/actions/workflows/SecChecks.yml)
-
+[![tfsec](https://github.com/dhananjaydogra/aws_test/actions/workflows/tfsec.yml/badge.svg?branch=prod)](https://github.com/dhananjaydogra/aws_test/actions/workflows/tfsec.yml)
