@@ -74,8 +74,9 @@ jobs:
 
     - uses: actions/cache@v2
       name: Cache plugin dir
-#      with:
-#        path: ~/.tflint.d/plugins
+      with:
+        path: ~/.tflint.d/plugins
+        key: ubuntu-latest-tflint-${{ hashFiles('.tflint.hcl') }}
 #        key: ${{ matrix.os }}-tflint-${{ hashFiles('.tflint.hcl') }}
 
     - uses: terraform-linters/setup-tflint@v2.0.0
