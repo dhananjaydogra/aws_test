@@ -39,7 +39,7 @@ jobs:
     name: checkov-action
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v12.1347.0
+        uses: actions/checkout@master
 
       - name: Run Checkov action
         id: checkov
