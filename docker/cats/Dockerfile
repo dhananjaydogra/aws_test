@@ -1,13 +1,3 @@
-FROM nginx
-EXPOSE 80
-RUN apt-get update -y && \
-  apt-get upgrade -y && \
-  apt-get install -y curl && \
-  cd /tmp && \
-  apt-get install awscli -y && \
-  apt-get install iputils-ping -y && \
-  rm -rf /tmp/* && \
-  rm -rf /var/lib/apt/lists/*
-COPY ./default.conf /etc/nginx/conf.d/default.conf
-COPY ./index.html /usr/share/nginx/html/index.html
-CMD nginx -g "daemon off;"
+FROM ubuntu:16.04 
+RUN apt-get update && apt-get install -y ping
+ENTRYPOINT ping
