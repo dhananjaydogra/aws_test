@@ -45,8 +45,8 @@ jobs:
         #### Build a docker container for Cats  push it to ECR
         cd docker/cats/
         ls -ltra
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:CATS_$GIT_SHA .
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:cats_$GIT_SHA .
 
         #Pushing the Cats Docker Image to ECR
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:CATS_$GIT_SHA
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:cats_$GIT_SHA
 
